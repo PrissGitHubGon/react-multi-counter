@@ -103,3 +103,61 @@
   margin-top: 20%;
   text-align: center;
 }
+
+@media (max-width: 1075px) {
+  .addCounter {
+    width: 1075px;
+  }
+}
+@media (max-width: 960px) {
+  .addCounter {
+    width: 690px;
+  }
+  .add,
+  .delete {
+    margin: 0px;
+    font-size: 7px;
+    margin-left: 30%;
+    width: 30px;
+    height: 15px;
+    border-radius: 15%;
+    color: white;
+  }
+}
+@media (max-width: 390px) {
+  .addCounter {
+    width: 390px;
+  }
+  .add,
+  .delete {
+    margin: 0px;
+    font-size: 7px;
+    margin-left: 10%;
+    width: 30px;
+    height: 15px;
+    border-radius: 15%;
+    color: white;
+  }
+  .header {
+    height: 5%;
+    width: 100%;
+    display: flex;
+
+    border-bottom: 2px solid rgb(190, 186, 186);
+  }
+  .header > img {
+    width: 35px;
+    height: 40px;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-right: 0%;
+  }
+  .header > h2 {
+    font-size: 24px;
+    margin-left: 5%;
+    line-height: 25px;
+  }
+  .add-delete {
+    margin: 0px;
+  }
+}

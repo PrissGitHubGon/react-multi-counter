@@ -4,32 +4,35 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 function App() {
-  const [counter, setCounter] = useState(0);
-  const [tab, setTab] = useState([0]);
+  const [counter, setCounter] = useState([0]);
+
+  // const [tab, setTab] = useState([0]);
   // console.log(tab);
   return (
     <div className="App">
       <Header />
       <div className="addCounter">
-        {tab.map(() => {
+        {counter.map((item, index) => {
           return (
-            <div className="global-counter">
+            <div key={index} className="global-counter">
               {" "}
               <div className="counter">
                 <button
                   style={{
-                    background: counter <= 0 ? "none" : "#5c48d3",
-                    border: counter <= 0 ? "none" : "#5c48d3",
+                    background: item <= 0 ? "none" : "#5c48d3",
+                    border: item <= 0 ? "none" : "#5c48d3",
                   }}
-                  disabled={counter <= 0 && true}
+                  disabled={item <= 0 && true}
                   onClick={() => {
-                    setCounter(counter - 1);
+                    const newTab = [...counter];
+                    newTab[index] -= 1;
+                    setCounter(newTab);
                   }}
                 >
                   -
                 </button>
 
-                <p className="result">{counter}</p>
+                <p className="result">{item}</p>
                 <button
                   style={{
                     background: counter >= 10 ? "none" : "#5c48d3",
@@ -37,7 +40,9 @@ function App() {
                   }}
                   disabled={counter >= 10 && true}
                   onClick={() => {
-                    setCounter(counter + 1);
+                    const newTab = [...counter];
+                    newTab[index] += 1;
+                    setCounter(newTab);
                   }}
                 >
                   +
@@ -46,7 +51,9 @@ function App() {
               <button
                 className="reset"
                 onClick={() => {
-                  setCounter(0);
+                  const newTab = [...counter];
+                  newTab[index] = 0;
+                  setCounter(newTab);
                 }}
               >
                 RESET
@@ -55,23 +62,25 @@ function App() {
           );
         })}
       </div>
-      <div>
+      <div className="add-delete">
         <button
-          className="add"
+          className={counter.length < 3 ? "add" : "add"}
+          disabled={counter.length < 3 ? false : true}
           onClick={() => {
-            const newTab = [...tab];
-            newTab.push(counter);
-            setTab(newTab);
+            const newTab = [...counter];
+            newTab.push(0);
+            setCounter(newTab);
           }}
         >
           ADD
         </button>
         <button
-          className="delete"
+          className={counter.length > 1 ? "delete" : "delete"}
+          disabled={counter.length > 1 ? false : true}
           onClick={() => {
-            const newTab = [...tab];
-            newTab.pop(counter);
-            setTab(newTab);
+            const newTab = [...counter];
+            newTab.pop();
+            setCounter(newTab);
           }}
         >
           Delete
