@@ -35,10 +35,10 @@ function App() {
                 <p className="result">{item}</p>
                 <button
                   style={{
-                    background: counter <= 10 ? "none" : "#5c48d3",
-                    border: counter <= 10 ? "none" : "#5c48d3",
+                    background: counter >= 10 ? "none" : "#5c48d3",
+                    border: counter >= 10 ? "none" : "#5c48d3",
                   }}
-                  disabled={counter <= 10 && true}
+                  disabled={counter >= 10 && true}
                   onClick={() => {
                     const newTab = [...counter];
                     newTab[index] += 1;
