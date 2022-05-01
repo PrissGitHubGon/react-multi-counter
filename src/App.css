@@ -56,9 +56,17 @@
   width: 60px;
   height: 30px;
   border-radius: 15%;
-  color: white;
+  /* color: white; */
+  border: none;
 }
-.add {
+.add-off,
+.delete-off {
+  margin: 20px;
+  font-size: 15px;
+  margin-left: 30%;
+  width: 60px;
+  height: 30px;
+  border-radius: 15%;
   color: black;
   border: none;
 }

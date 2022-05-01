@@ -64,7 +64,7 @@ function App() {
       </div>
       <div className="add-delete">
         <button
-          className={counter.length < 3 ? "add" : "add"}
+          className={counter.length < 3 ? "add" : "add-off"}
           disabled={counter.length < 3 ? false : true}
           onClick={() => {
             const newTab = [...counter];
@@ -75,7 +75,7 @@ function App() {
           ADD
         </button>
         <button
-          className={counter.length > 1 ? "delete" : "delete"}
+          className={counter.length > 1 ? "delete" : "delete-off"}
           disabled={counter.length > 1 ? false : true}
           onClick={() => {
             const newTab = [...counter];
