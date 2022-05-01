@@ -121,19 +121,12 @@
   .addCounter {
     width: 690px;
   }
-  .add,
-  .delete {
-    margin-left: 30%;
-  }
 }
 @media (max-width: 390px) {
   .addCounter {
     width: 390px;
   }
-  .add,
-  .delete {
-    margin-left: 20%;
-  }
+
   .header {
     height: 5%;
   }
@@ -148,5 +141,11 @@
     font-size: 24px;
     margin-left: 5%;
     line-height: 25px;
+  }
+  .add,
+  .delete,
+  .add-off,
+  .delete-off {
+    margin: 0;
   }
 }
