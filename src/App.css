@@ -123,13 +123,7 @@
   }
   .add,
   .delete {
-    margin: 0px;
-    font-size: 7px;
     margin-left: 30%;
-    width: 30px;
-    height: 15px;
-    border-radius: 15%;
-    color: white;
   }
 }
 @media (max-width: 390px) {
@@ -138,20 +132,10 @@
   }
   .add,
   .delete {
-    margin: 0px;
-    font-size: 7px;
-    margin-left: 10%;
-    width: 30px;
-    height: 15px;
-    border-radius: 15%;
-    color: white;
+    margin-left: 20%;
   }
   .header {
     height: 5%;
-    width: 100%;
-    display: flex;
-
-    border-bottom: 2px solid rgb(190, 186, 186);
   }
   .header > img {
     width: 35px;
@@ -164,8 +148,5 @@
     font-size: 24px;
     margin-left: 5%;
     line-height: 25px;
-  }
-  .add-delete {
-    margin: 0px;
   }
 }
